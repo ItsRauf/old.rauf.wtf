@@ -4,19 +4,12 @@ const values = hash.split("&").reduce((result, item) => {
   result[parts[0]] = parts[1];
   return result;
 }, {});
-// console.log(values);
-// fetch("https://discord.com/api/v7/users/@me", {
-//   method: "GET",
-//   mode: 'cors',
-//   cache: 'no-cache',
-//   headers: {
-//     "Authorization": `${values.token_type} ${values.access_token}`
-//   },
-// }).then(res => {
-//   if (res.ok) {
-//     const data = res.json();
-//   }
-// })
+
+history.pushState(
+  "",
+  document.title,
+  window.location.pathname + window.location.search
+);
 
 async function getData() {
   const userData = await fetch("https://discord.com/api/v7/users/@me", {
