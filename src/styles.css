@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/web/JetBrainsMono-Regular.eot")
+      format("embedded-opentype"),
+    url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/web/JetBrainsMono-Regular.woff2")
+      format("woff2"),
+    url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/web/JetBrainsMono-Regular.woff")
+      format("woff"),
+    url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  --webkit-font-feature-settings: "liga" on, "calt" on;
+  --webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: "JetBrains Mono";
+
+  margin: 0;
+  color: white;
+}
+
+.hide-native-scrollbar {
+  scrollbar-width: none; /* Firefox 64 */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
+}
+.hide-native-scrollbar::-webkit-scrollbar {
+  /** WebKit */
+  display: none;
+}
+
+.br-replace {
+  margin-bottom: 25px;
+}
+
+html {
+  background: #16161c;
+  scrollbar-width: none;
+}
+
+body {
+  margin: 20px 0;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-no-vertical {
+  display: flex;
+  flex-flow: column;
+}
+
+/* .main {
+  height: 100vh;
+} */
+
+.rounded-100 {
+  border-radius: 100%;
+}
+
+#descriptor {
+  transition: all 0.5s linear;
+}
+
+#spotifyNowPlaying {
+  background: #1db954;
+  padding: 10px;
+  display: inline;
+  transition: all 0.5s linear;
+}
+
+#spotifyPlayingImageDiv {
+  float: left;
+  padding-right: 10px;
+}
+
+#spotifyText {
+  float: right;
+  text-align: right;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#spotifyLabel {
+  font-size: 0.5rem;
+  padding-bottom: 5px;
+}
+
+#spotifyTextArtist {
+  font-size: 0.75rem;
+}
+
+#spotifyTextAlbum {
+  padding-top: 5px;
+  font-size: 0.5rem;
+}
+
+.links {
+  text-align: right;
+  align-items: flex-start;
+}
+
+#socials {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+#twitter {
+  color: #1da1f2;
+}
+
+#instagram {
+  color: transparent;
+  background-clip: text;
+
+  background: -webkit-linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+  -webkit-background-clip: text;
+  text-decoration-line: underline;
+  position: relative;
+}
+#instagram::after {
+  background: -webkit-linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+}
+
+#behance {
+  color: #1769ff;
+}
+
+#youtube {
+  color: #ff0000;
+}
+
+#spotify {
+  color: #1db954;
+}
+
+#soundcloud {
+  color: #ff3300;
+}
+
+#applemusic {
+  color: #fb4159;
+}
+
+#github {
+  color: #333;
+}
+
+#gitlab {
+  color: #fc6d26;
+}
+
+#githubProfile {
+  background: #333;
+  padding: 10px;
+  display: inline;
+  transition: all 0.5s linear;
+}
+
+#githubProfileImageDiv {
+  float: left;
+  padding-right: 10px;
+}
+
+#githubText {
+  float: right;
+  text-align: right;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#githubLabel {
+  font-size: 0.5rem;
+  padding-bottom: 5px;
+}
+
+#githubUsername {
+  font-size: 0.75rem;
+}
+
+#githubBio {
+  padding-top: 2px;
+  font-size: 0.75rem;
+  text-align: left;
+}
+
+#githubCompany {
+  padding-top: 5px;
+  font-size: 0.5rem;
+}
+
+footer {
+  opacity: 0.25;
+  font-size: 0.75rem;
+}
