@@ -1,5 +1,7 @@
 const pronouns_age = document.getElementById("pronouns_age");
-pronouns_age.innerText += ` ${new Date().getFullYear() - 2003}`;
+pronouns_age.innerText += ` ${
+  dayjs().from(dayjs("2003-07-30"), true).split(" ")[0]
+}`;
 
 function random(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -14,7 +16,7 @@ const descriptors = [
   "artist",
   "person",
   "human",
-  "friend"
+  "friend",
 ];
 
 function setDescriptor() {

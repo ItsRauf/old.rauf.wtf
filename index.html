@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta property="og:title" content="Rauf Islam (ItsRauf)" />
     <meta property="og:description" content="Hi! I'm Rauf, your not so average person who likes to do it all." />
-    <meta property="og:image" content="https://i.imgur.com/L5UXDDn.png" />
+    <meta property="og:image" content="assets/avatar.png" />
     <meta name="theme-color" content="#956ff8">
     <meta name="twitter:card" content="summary">
     <title>Rauf Islam</title>
@@ -96,6 +96,11 @@
     </div>
     <div class="br-replace"></div>
     <div class="br-replace"></div>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/plugin/relativeTime.js"></script>
+    <script>
+      dayjs.extend(window.dayjs_plugin_relativeTime)
+    </script>
     <script src="src/index.js"></script>
   </body>
 </html>
