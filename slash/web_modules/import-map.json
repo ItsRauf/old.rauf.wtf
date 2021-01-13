@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "antd": "./antd.js",
+    "antd/dist/antd.dark.css": "./antd/dist/antd.dark.css",
+    "react": "./react.js",
+    "react-dom": "./react-dom.js",
+    "recoil": "./recoil.js"
+  }
+}
