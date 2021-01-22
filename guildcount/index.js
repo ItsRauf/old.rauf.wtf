@@ -12,7 +12,7 @@ history.pushState(
 );
 
 async function getData() {
-  const userData = await fetch("https://discord.com/api/v7/users/@me", {
+  const userData = await fetch("https://discord.com/api/v8/users/@me", {
     method: "GET",
     mode: "cors",
     cache: "no-cache",
@@ -24,7 +24,7 @@ async function getData() {
   const user = await userData.json();
 
   const userGuildData = await fetch(
-    "https://discord.com/api/v7/users/@me/guilds",
+    "https://discord.com/api/v8/users/@me/guilds",
     {
       method: "GET",
       mode: "cors",
@@ -41,7 +41,7 @@ async function getData() {
   if (user.guilds.length === 100) {
     const after = user.guilds[99].id;
     const extraGuilds = await fetch(
-      `https://discord.com/api/v7/users/@me/guilds?after=${after}`,
+      `https://discord.com/api/v8/users/@me/guilds?after=${after}`,
       {
         method: "GET",
         mode: "cors",
