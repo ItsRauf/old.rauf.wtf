@@ -38,7 +38,7 @@ async function getData() {
   user.guilds = await userGuildData.json();
 
   // in the rare case somebody broke discord
-  if (user.guilds.length == 100) {
+  if (user.guilds.length === 100) {
     const after = user.guilds[99].id;
     const extraGuilds = await fetch(
       `https://discord.com/api/v7/users/@me/guilds?after=${after}`,
