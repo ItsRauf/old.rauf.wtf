@@ -37,6 +37,24 @@ async function getData() {
 
   user.guilds = await userGuildData.json();
 
+  // in the rare case somebody broke discord
+  if (user.guilds.length == 100) {
+    const after = user.guilds[99].id;
+    const extraGuilds = await fetch(
+      `https://discord.com/api/v7/users/@me/guilds?after=${after}`,
+      {
+        method: "GET",
+        mode: "cors",
+        cache: "no-cache",
+        headers: {
+          Authorization: `${values.token_type} ${values.access_token}`,
+        },
+      }
+    );
+    const extraGuildsJson = await extraGuilds.json();
+    if (extraGuildsJson.length) user.guilds.push(...extraGuildsJson);
+  }
+
   return user;
 }
 
